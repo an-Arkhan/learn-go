@@ -1,0 +1,55 @@
+### Get All Orders
+GET http://localhost:8080/orders
+Accept: application/json
+
+### Get Order by ID
+GET http://localhost:8080/orders/{id}
+Accept: application/json
+
+### Create Order
+POST http://localhost:8080/orders
+Content-Type: application/json
+Accept: application/json
+
+{
+    "customer_name": "Arkhan",
+    "ordered_at": "2023-03-11T21:21:46+00:00",
+    "items":[
+        {
+            "item_code": "1",
+            "description": "Cendol",
+            "quantity": 5
+        },
+        {
+            "item_code": "2",
+            "description": "Es Oyen",
+            "quantity": 2
+        }
+    ]
+}
+
+### Update Order
+PUT http://localhost:8080/orders/1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "customer_name": "Ark",
+    "ordered_at": "2023-03-11T21:21:46+00:00",
+    "items":[
+        {
+            "item_code": "1",
+            "description": "Es Buah",
+            "quantity": 1
+        },
+        {
+            "item_code": "2",
+            "description": "Es Krim",
+            "quantity": 4
+        }
+    ]
+}
+
+### Delete Order
+DELETE http://localhost:8080/orders/{id}
+Accept: application/json
